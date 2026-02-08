@@ -555,3 +555,91 @@ nav {
     padding: 20px;
   }
 }
+
+/* ============================================
+   PAGE PROJETS
+   ============================================ */
+
+.projects-intro {
+  margin-bottom: 24px;
+  color: #cbd5e1;
+}
+
+.project-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.project-form input[type="text"],
+.project-form input[type="url"] {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--text-light);
+  min-width: 160px;
+  flex: 1 1 220px;
+}
+
+.project-form button {
+  flex: 0 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: linear-gradient(180deg, rgba(59,130,246,0.04), rgba(59,130,246,0.02));
+  border: 1px solid rgba(59,130,246,0.06);
+  padding: 18px;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+}
+
+.project-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--accent-light);
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #9fb0d2;
+  margin-bottom: 12px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-form { flex-direction: column; }
+  .project-form input[type="text"],
+  .project-form input[type="url"],
+  .project-form button { width: 100%; }
+}
+
+/* Espace en haut pour la navbar fixe */
+.projects-page { padding-top: 100px; padding-bottom: 40px; }
+
+@media (max-width: 480px) {
+  .projects-page { padding-top: 120px; }
+}
+
